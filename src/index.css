@@ -1,0 +1,66 @@
+@tailwind utilities;
+
+:root {
+  --bg: #fdfdfd;
+  --ink: #13152c;
+  --accent: #676da8;
+  --accent-2: #343978;
+  --muted: #939393;
+  --panel: #eef4ff;
+  --soft: #f4f6ff;
+  --white: #ffffff;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  font-family: Rubik, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  line-height: 1.35;
+  font-weight: 400;
+
+  color: var(--ink);
+  background-color: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

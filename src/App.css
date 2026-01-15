@@ -1,0 +1,568 @@
+.page {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.topbar {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 28px) clamp(16px, 4vw, 24px) 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brandLogo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.phonePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 40px;
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  min-height: 44px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.phoneIcon {
+  width: 22px;
+  height: 22px;
+  background: center/contain no-repeat url("./assets/figma/phone-icon.svg");
+}
+
+.phoneNumber {
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandMark {
+  width: 42px;
+  height: 42px;
+  background: center/contain no-repeat url("./assets/figma/phone-icon.svg");
+  opacity: 0.85;
+  transform: rotate(90deg);
+}
+
+.brandText {
+  text-align: right;
+  line-height: 1.05;
+}
+
+.brandName {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.brandSub {
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(19, 21, 44, 0.75);
+}
+
+.hero {
+  position: relative;
+  padding: clamp(14px, 2.5vw, 22px) 0 clamp(26px, 4vw, 40px);
+  isolation: isolate;
+}
+
+.heroInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(18px, 4vw, 40px);
+  position: relative;
+  z-index: 1;
+}
+
+.heroCopy {
+  text-align: right;
+  flex: 1.1;
+  min-width: 0;
+}
+
+.heroTitle {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 1.02;
+  letter-spacing: -0.5px;
+}
+
+.heroTitleAccent {
+  color: var(--accent);
+}
+
+.heroSubtitle {
+  margin: 18px 0 0;
+  font-weight: 500;
+  font-size: clamp(18px, 2.5vw, 28px);
+  line-height: 1.25;
+}
+
+.heroArt {
+  flex: 0.9;
+  position: relative;
+  min-width: 0;
+  height: clamp(240px, 42vw, 320px);
+}
+
+.heroBackplate {
+  display: none;
+  position: absolute;
+  top: 56px;
+  right: -220px;
+  width: min(737px, 92vw);
+  aspect-ratio: 737 / 487;
+  height: auto;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius: 75px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background: transparent;
+  z-index: 0;
+}
+
+.heroArtFrame {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 0;
+  bottom: 0;
+  border-radius: 42px;
+  background: #d9d9d9;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+
+.heroArtImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.heroGold {
+  display: none;
+  position: absolute;
+  left: -120px;
+  bottom: -110px;
+  width: 520px;
+  height: 360px;
+  background: linear-gradient(145deg, #d8aa43, #f6d27a);
+  mask: center/contain no-repeat url("./assets/figma/gold-shape-mask.svg");
+  -webkit-mask: center/contain no-repeat url("./assets/figma/gold-shape-mask.svg");
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.quickForm {
+  max-width: 1320px;
+  margin: 34px auto 0;
+  padding: 0 clamp(16px, 4vw, 24px);
+}
+
+.quickFormShell {
+  background: var(--ink);
+  border: 1px solid rgba(0, 0, 0, 0.65);
+  border-radius: 999px;
+  padding: 14px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quickField {
+  background: var(--white);
+  border-radius: 999px;
+  padding: 6px 18px;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  width: min(440px, 100%);
+}
+
+.quickField input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 500;
+  text-align: right;
+  background: transparent;
+}
+
+.quickField input::placeholder {
+  color: rgba(146, 146, 146, 1);
+}
+
+.quickSubmit {
+  background: var(--accent);
+  color: var(--white);
+  border: 0;
+  border-radius: 999px;
+  min-height: 62px;
+  padding: 0 28px;
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 600;
+  cursor: pointer;
+  width: min(320px, 100%);
+}
+
+.quickSubmit:hover {
+  filter: brightness(1.03);
+}
+
+.quickSubmit:active {
+  transform: translateY(1px);
+}
+
+.quickSubmit:focus-visible,
+.leadSubmit:focus-visible,
+.quickField input:focus-visible,
+.leadForm input:focus-visible {
+  outline: 3px solid rgba(103, 109, 168, 0.55);
+  outline-offset: 3px;
+}
+
+.why {
+  margin-top: 24px;
+  padding: clamp(42px, 7vw, 66px) 0 clamp(54px, 7vw, 76px);
+  background: linear-gradient(85.5289deg, rgb(19, 21, 44) 38.67%, rgb(63, 70, 146) 99.152%);
+  color: var(--white);
+}
+
+.whyInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 24px);
+  text-align: center;
+}
+
+.whyTitle {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.15;
+}
+
+.whyTitleLite {
+  font-weight: 400;
+}
+
+.whyTitleAccent {
+  color: var(--accent);
+}
+
+.whySub {
+  margin: 18px 0 0;
+  font-size: clamp(16px, 2.4vw, 22px);
+  line-height: 1.35;
+}
+
+.whySubBold {
+  font-weight: 900;
+}
+
+.whyKicker {
+  margin: 28px 0 0;
+  font-size: clamp(18px, 2.8vw, 28px);
+}
+
+.whyKickerBold {
+  font-weight: 900;
+}
+
+.benefits {
+  margin: 26px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  padding: 18px 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 1130px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 6px 10px;
+}
+
+.benefitIcon {
+  width: 34px;
+  height: 34px;
+  background: center/contain no-repeat url("./assets/figma/benefit-icon.svg");
+  flex: 0 0 auto;
+}
+
+.benefitText {
+  text-align: right;
+  line-height: 1.05;
+}
+
+.benefitTop {
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 500;
+}
+
+.benefitBottom {
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 900;
+}
+
+.lead {
+  position: relative;
+  min-height: 100svh;
+  padding: clamp(56px, 8vw, 90px) 0 0;
+  background: center/cover no-repeat url("./assets/figma/bg.png");
+}
+
+.leadOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.leadInner {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 24px) clamp(72px, 10vw, 120px);
+  display: flex;
+  justify-content: center;
+}
+
+.leadCard {
+  width: min(924px, 100%);
+  border-radius: 47px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 5vw, 54px) clamp(18px, 4vw, 38px) clamp(22px, 4vw, 42px);
+  text-align: center;
+}
+
+.leadTitle {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--accent-2);
+}
+
+.leadSubtitle {
+  margin: 10px 0 0;
+  font-size: clamp(20px, 3.4vw, 34px);
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.leadHint {
+  margin: 10px 0 0;
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.leadForm {
+  margin: 34px auto 0;
+  width: min(646px, 100%);
+  display: grid;
+  gap: 14px;
+}
+
+.leadForm input {
+  height: 66px;
+  border-radius: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  padding: 0 22px;
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 500;
+  background: var(--white);
+  text-align: right;
+  outline: none;
+}
+
+.leadForm input::placeholder {
+  color: rgba(147, 147, 147, 1);
+}
+
+.leadSubmit {
+  height: 66px;
+  border-radius: 60px;
+  border: 0;
+  background: rgb(50, 55, 116);
+  color: var(--white);
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.leadSubmit:hover {
+  filter: brightness(1.05);
+}
+
+.leadSubmit:active {
+  transform: translateY(1px);
+}
+
+.footer {
+  background: #d9d9d9;
+  padding: 22px 0;
+}
+
+.footerInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 24px);
+  text-align: center;
+}
+
+.footerLineStrong {
+  font-size: clamp(16px, 2.4vw, 22px);
+  font-weight: 800;
+}
+
+.footerLine {
+  font-size: clamp(16px, 2.4vw, 22px);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .heroInner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+  }
+
+  .heroArt {
+    padding: 12px 0 0 12px;
+    height: 260px;
+  }
+
+  /* Mobile/tablet: avoid absolute-positioned hero frame collapsing in some browsers */
+  .heroArtFrame {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .heroBackplate {
+    left: -25px;
+    right: -160px;
+    width: min(680px, 96vw);
+  }
+
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    align-items: center;
+  }
+
+  .brandLogo {
+    height: 38px;
+  }
+
+  .heroCopy {
+    text-align: center;
+  }
+
+  .quickFormShell {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 28px;
+  }
+
+  .quickField,
+  .quickSubmit {
+    width: 100%;
+  }
+
+  .quickSubmit {
+    min-height: 56px;
+  }
+
+  .leadForm input,
+  .leadSubmit {
+    height: 58px;
+  }
+}
+
+@media (max-width: 520px) {
+  .benefits {
+    grid-template-columns: 1fr;
+    border: 0;
+    padding: 0;
+    gap: 12px;
+    justify-items: center;
+  }
+
+  .benefit {
+    width: min(360px, 92%);
+    margin-inline: auto;
+    justify-content: flex-start;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .benefitIcon {
+    flex: 0 0 auto;
+  }
+
+  .benefitText {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+
+  .benefitTop {
+    font-weight: 400;
+  }
+
+  .benefitBottom {
+    font-weight: 900;
+  }
+
+  .leadCard {
+    border-radius: 28px;
+  }
+}
