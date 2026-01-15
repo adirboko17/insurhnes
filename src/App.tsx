@@ -2,7 +2,6 @@ import './App.css'
 import logoRefaelUrl from './assets/figma/logo-refael.svg'
 import heroPhotoUrl from './assets/figma/denden.jpg'
 import { Component as HeroBackground } from '@/components/ui/background-snippets'
-import { FlipButton } from '@/components/ui/flip-button'
 
 function App() {
   const onQuickSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
@@ -78,14 +77,16 @@ function App() {
                   id="quickPhone"
                   name="phone"
                   type="tel"
-                  placeholder="מס’ טלפון:"
+                  placeholder=":מספר טלפון"
                   autoComplete="tel"
                   inputMode="tel"
                   required
                 />
               </div>
 
-              <FlipButton className="quickSubmit" type="submit" text1="הטופס נשלח" text2="שליחת הטופס >>" />
+              <button className="quickSubmit" type="submit">
+                שליחת הטופס &gt;&gt;
+              </button>
             </div>
           </form>
         </section>
@@ -162,7 +163,7 @@ function App() {
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="מס’ טלפון"
+                  placeholder="מס' טלפון"
                   autoComplete="tel"
                   inputMode="tel"
                   required
@@ -180,7 +181,9 @@ function App() {
                   required
                 />
 
-                <FlipButton className="leadSubmit" type="submit" text1="הטופס נשלח" text2="שליחת טופס" />
+                <button className="leadSubmit" type="submit">
+                  שליחת טופס
+                </button>
               </form>
             </div>
           </div>
