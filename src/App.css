@@ -122,6 +122,118 @@
   color: var(--accent);
 }
 
+.page--a .heroTitle {
+  color: rgba(0, 0, 0, 1);
+  font-size: 60px;
+}
+
+.page--a .heroTitleAccent {
+  color: rgba(220, 187, 140, 1);
+}
+
+.page--b .heroCopy {
+  text-align: right;
+}
+
+.page--b .heroTitle {
+  color: #000;
+  font-weight: 900;
+  font-size: clamp(42px, 7vw, 64px);
+  text-align: right;
+}
+
+.page--b .heroTitleAccent {
+  /* Match the warm gold from the Figma hero for Page B */
+  color: #d8b07a;
+}
+
+.page--a .heroSubtitle {
+  color: rgba(0, 0, 0, 1);
+}
+
+.page--b .heroSubtitle {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Page B: overrides (matches browser-preview tweaks) */
+.page--b .why {
+  background: linear-gradient(85.53deg, rgba(220, 187, 140, 1) 38.67%, rgba(169, 122, 43, 1) 99.152%);
+}
+
+.page--b .benefitIcon {
+  background-image: url("./assets/figma/benefit-icon-white.svg");
+}
+
+.page--b .quickSubmit {
+  background-color: rgba(220, 187, 140, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.page--b .leadTitle {
+  color: rgba(179, 134, 61, 1);
+}
+
+.page--b .leadSubmit {
+  background-color: rgba(179, 134, 61, 1);
+}
+
+.page--b .leadCard {
+  background-color: var(--white);
+}
+
+.page--b #fullName {
+  background-color: var(--white);
+}
+
+.page--b .leadSubtitle {
+  color: rgba(0, 0, 0, 1);
+}
+
+.page--b .leadHint {
+  color: rgba(0, 0, 0, 1);
+}
+
+.page--b .lead {
+  background-image: url("./assets/figma/Group 25.png");
+}
+
+.page--b .leadOverlay {
+  background: transparent;
+}
+
+/* Page B: "Why" section text should be black */
+.page--b .whyTitleLite {
+  color: rgba(0, 0, 0, 1);
+}
+
+.page--b .whyTitleAccent {
+  color: rgba(0, 0, 0, 1);
+}
+
+.page--b .whySub {
+  color: rgba(0, 0, 0, 1);
+}
+
+.page--b .whyKicker {
+  color: rgba(0, 0, 0, 1);
+}
+
+.page--b .benefits {
+  color: rgba(0, 0, 0, 1);
+  border-color: rgba(0, 0, 0, 0.75);
+  gap: 0;
+}
+
+.page--b .benefit + .benefit {
+  border-inline-start: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.page--b .benefitCheck {
+  border-color: rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .heroSubtitle {
   margin: 18px 0 0;
   font-weight: 500;
@@ -194,7 +306,8 @@
 }
 
 .quickFormShell {
-  background: var(--ink);
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(13, 13, 13, 1);
   border: 1px solid rgba(0, 0, 0, 0.65);
   border-radius: 999px;
   padding: 14px;
@@ -203,6 +316,15 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.page--a .quickFormShell {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(220, 187, 140, 1);
+  border-width: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-image: none;
 }
 
 .quickField {
@@ -243,6 +365,10 @@
   transition: transform 180ms ease, filter 180ms ease;
 }
 
+.page--a .quickSubmit {
+  background: rgba(0, 0, 0, 1);
+}
+
 .quickSubmit:hover {
   filter: brightness(1.03);
   transform: scale(0.98);
@@ -267,6 +393,10 @@
   color: var(--white);
 }
 
+.page--a .why {
+  background: linear-gradient(85.53deg, rgba(0, 0, 0, 1) 38.67%, rgba(46, 46, 46, 1) 99.152%);
+}
+
 .whyInner {
   max-width: 1320px;
   margin: 0 auto;
@@ -287,6 +417,49 @@
 
 .whyTitleAccent {
   color: var(--accent);
+}
+
+.page--a .whyTitleAccent {
+  color: rgba(220, 187, 140, 1);
+}
+
+.page--a .benefits {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.page--a .benefit + .benefit {
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.benefitCheck {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  border: 1px solid rgba(36, 195, 107, 0.95);
+  color: rgba(36, 195, 107, 0.95);
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.benefitCheck::before {
+  content: "✓";
+}
+
+.page--a .benefitText {
+  white-space: normal;
+}
+
+.page--a .benefitTop {
+  font-weight: 800;
+}
+
+.page--a .benefitBottom {
+  font-weight: 500;
+  line-height: 1.15;
 }
 
 .whySub {
@@ -362,6 +535,34 @@
   background: rgba(255, 255, 255, 0.74);
 }
 
+.page--a .leadOverlay {
+  /* Use a zoomed layer so the photo "fills" the background even if it crops */
+  background: transparent;
+  overflow: hidden;
+}
+
+.page--a .leadOverlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/figma/504 1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* Make sure it visually "fills" even on wide/short viewports by allowing extra crop */
+  transform: scale(1.18);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.page--a .leadOverlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.74);
+  pointer-events: none;
+}
+
 .leadInner {
   position: relative;
   max-width: 1320px;
@@ -381,11 +582,20 @@
   text-align: center;
 }
 
+.page--a .leadCard {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
 .leadTitle {
   margin: 0;
   font-size: clamp(30px, 5vw, 52px);
   font-weight: 800;
   color: var(--accent-2);
+}
+
+.page--a .leadTitle {
+  color: rgba(220, 187, 140, 1);
 }
 
 .leadSubtitle {
@@ -437,6 +647,10 @@
   font-weight: 600;
   cursor: pointer;
   transition: transform 180ms ease, filter 180ms ease;
+}
+
+.page--a .leadSubmit {
+  background: rgba(0, 0, 0, 1);
 }
 
 .leadSubmit:hover {
@@ -517,6 +731,12 @@
     text-align: center;
   }
 
+  .page--b .heroCopy,
+  .page--b .heroTitle,
+  .page--b .heroSubtitle {
+    text-align: center;
+  }
+
   .quickFormShell {
     flex-direction: column;
     align-items: stretch;
@@ -545,6 +765,29 @@
   .leadInner {
     padding-bottom: 56px;
   }
+
+  /* Page A: stack the 3 benefits vertically on mobile */
+  .page--a .benefits {
+    grid-template-columns: 1fr;
+    border: 0;
+    padding: 0;
+    gap: 12px;
+    justify-items: center;
+  }
+
+  .page--a .benefit {
+    width: min(360px, 92%);
+    margin-inline: auto;
+    justify-content: flex-start;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .page--a .benefit + .benefit {
+    border-inline-start: 0;
+  }
 }
 
 @media (max-width: 520px) {
@@ -554,6 +797,15 @@
     padding: 0;
     gap: 12px;
     justify-items: center;
+  }
+
+  /* Page B: add spacing between stacked benefit cards on mobile */
+  .page--b .benefits {
+    gap: 12px;
+  }
+
+  .page--b .benefit + .benefit {
+    border-inline-start: 0;
   }
 
   .benefit {
@@ -585,6 +837,48 @@
 
   .benefitBottom {
     font-weight: 900;
+  }
+
+  .page--a .benefitText {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex-wrap: wrap;
+    white-space: normal;
+    text-align: right;
+  }
+
+  .page--a .benefitTop {
+    font-weight: 800;
+  }
+
+  .page--a .benefitBottom {
+    font-weight: 500;
+  }
+
+  /* Page B: benefits copy is longer — allow wrapping & stack lines nicely on mobile */
+  .page--b .benefit {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .page--b .benefitText {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .page--b .benefitTop {
+    font-size: clamp(14px, 3.6vw, 16px);
+    line-height: 1.15;
+  }
+
+  .page--b .benefitBottom {
+    font-size: clamp(16px, 4.2vw, 19px);
+    line-height: 1.15;
   }
 
   .leadCard {
