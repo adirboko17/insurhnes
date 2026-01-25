@@ -122,6 +122,11 @@
   color: var(--accent);
 }
 
+/* HomePage: these <br> should only appear on mobile */
+.heroTitleMobileOnlyBreak {
+  display: none;
+}
+
 .page--a .heroTitle {
   color: rgba(0, 0, 0, 1);
   font-size: 60px;
@@ -825,8 +830,8 @@
 }
 
 @media (max-width: 520px) {
-  /* HomePage: force "בטיפולי שיניים" to a new line under "50% הנחה" */
-  .heroTitleAccentBreak {
+  /* HomePage: stack hero title into 3 lines on mobile */
+  .heroTitleMobileOnlyBreak {
     display: block;
   }
 

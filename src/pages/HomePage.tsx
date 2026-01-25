@@ -39,11 +39,11 @@ export default function HomePage() {
 
             <div className="heroCopy">
               <h1 className="heroTitle">
-                המעטפת הרפואית
-                <br />
-                שמכסה לך עד
-                <br /> <span className="heroTitleAccent">50% הנחה</span>{' '}
-                <span className="heroTitleAccent heroTitleAccentBreak">בטיפולי שיניים</span>
+                הכיסוי שמחזיר לך
+                <br className="heroTitleMobileOnlyBreak" />
+                עד <span className="heroTitleAccent">50%</span>
+                <br className="heroTitleMobileOnlyBreak" />
+                <span className="heroTitleAccent">בטיפולי השיניים</span>
               </h1>
               <p className="heroSubtitle">
                 הכי משתלם לכסות אצל רפאל,
