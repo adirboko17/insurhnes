@@ -40,8 +40,10 @@ export default function HomePage() {
             <div className="heroCopy">
               <h1 className="heroTitle">
                 הכיסוי שמחזיר לך
+                {' '}
                 <br className="heroTitleMobileOnlyBreak" />
                 עד <span className="heroTitleAccent">50%</span>
+                {' '}
                 <br className="heroTitleMobileOnlyBreak" />
                 <span className="heroTitleAccent">בטיפולי השיניים</span>
               </h1>
