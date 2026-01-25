@@ -39,13 +39,13 @@ export default function HomePage() {
 
             <div className="heroCopy">
               <h1 className="heroTitle">
-                הביטוח היחיד
+                המעטפת הרפואית
                 <br />
                 שמכסה לך עד
                 <br /> <span className="heroTitleAccent">50% הנחה</span>
               </h1>
               <p className="heroSubtitle">
-                הכי משתלם לבטח אצל רפאל,
+                הכי משתלם לכסות אצל רפאל,
                 <br />
                 גם במחיר וגם בשירות.
               </p>
@@ -93,7 +93,7 @@ export default function HomePage() {
         <section className="why">
           <div className="whyInner">
             <h2 className="whyTitle">
-              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">ביטוח אצלנו?</span>
+              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">כיסוי אצלנו?</span>
             </h2>
             <p className="whySub">
               כי אנחנו באמת דואגים לבריאות שלכם.
@@ -145,7 +145,7 @@ export default function HomePage() {
           <div className="leadOverlay" aria-hidden />
           <div className="leadInner">
             <div className="leadCard" aria-label="השאירו פרטים ונחזור אליכם">
-              <h3 className="leadTitle">מעוניינים בביטוח שיניים?</h3>
+              <h3 className="leadTitle">מעוניינים בכיסוי שיניים?</h3>
               <p className="leadSubtitle">הצטרפו עכשיו למשפחת רפאל</p>
               <p className="leadHint">מלאו את פרטי הטופס ונחזור אליכם במהירות</p>
 

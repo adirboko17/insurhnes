@@ -39,7 +39,7 @@ export default function PageB() {
 
             <div className="heroCopy">
               <h1 className="heroTitle">
-                הביטוח היחיד
+                הכיסוי היחיד
                 <br />
                 שנותן לך מימון
                 <br />
@@ -96,7 +96,7 @@ export default function PageB() {
         <section className="why">
           <div className="whyInner">
             <h2 className="whyTitle">
-              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">ביטוח אצלנו?</span>
+              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">כיסוי אצלנו?</span>
             </h2>
             <p className="whySub">
               כי אנחנו באמת דואגים לבריאות התינוק שלך.

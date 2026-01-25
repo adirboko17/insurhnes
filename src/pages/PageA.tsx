@@ -39,7 +39,7 @@ export default function PageA() {
 
             <div className="heroCopy">
               <h1 className="heroTitle">
-                הביטוח היחיד
+                הכיסוי היחיד
                 <br />
                 שנותן לכם מימון
                 <br />
@@ -48,7 +48,7 @@ export default function PageA() {
                 <span className="heroTitleAccent">בהתפתחות הילד</span>
               </h1>
               <p className="heroSubtitle">
-                כשהילד שלכם מבוטח אצלנו,
+                כשהילד שלכם מכוסה אצלנו,
                 <br />
                 הוא נמצא בידיים טובות ומכוסה מכל הכיוונים.
               </p>
@@ -96,7 +96,7 @@ export default function PageA() {
         <section className="why">
           <div className="whyInner">
             <h2 className="whyTitle">
-              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">ביטוח אצלנו?</span>
+              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">כיסוי אצלנו?</span>
             </h2>
             <p className="whySub">
               כי אנחנו באמת דואגים להתפתחות הילד שלכם.
@@ -156,7 +156,7 @@ export default function PageA() {
           <div className="leadOverlay" aria-hidden />
           <div className="leadInner">
             <div className="leadCard" aria-label="השאירו פרטים ונחזור אליכם">
-              <h3 className="leadTitle">רוצים לבטח אצלנו?</h3>
+              <h3 className="leadTitle">רוצים לכסות אצלנו?</h3>
               <p className="leadSubtitle">הצטרפו עכשיו למשפחת רפאל</p>
               <p className="leadHint">מלאו את פרטי הטופס ונחזור אליכם במהירות</p>
 
