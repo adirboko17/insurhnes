@@ -749,6 +749,17 @@
     margin-top: 0;
   }
 
+  /* Page A: remove gap to next section on mobile (match Page B) */
+  .page--a .why {
+    margin-top: 0;
+  }
+
+  /* Ensure hero background stays solid when sections touch */
+  .page--a .hero,
+  .page--b .hero {
+    background: var(--bg);
+  }
+
   .quickFormShell {
     flex-direction: column;
     align-items: stretch;

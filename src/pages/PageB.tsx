@@ -10,9 +10,9 @@ export default function PageB() {
   return (
     <div className="page page--b">
       <header className="topbar" dir="ltr">
-        <a className="phonePill" href="tel:088888888" aria-label="התקשרו: 08-8888888">
+        <a className="phonePill" href="tel:+972502311537" aria-label="התקשרו: 0502311537">
           <span className="phoneIcon" aria-hidden />
-          <span className="phoneNumber">08-8888888</span>
+          <span className="phoneNumber">0502311537</span>
         </a>
 
         <img className="brandLogo" src={logoRefaelUrl} alt="רפאל פיננסים ובריאות" />
