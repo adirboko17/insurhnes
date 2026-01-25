@@ -113,7 +113,7 @@
 .heroTitle {
   margin: 0;
   font-weight: 800;
-  font-size: clamp(42px, 7vw, 78px);
+  font-size: clamp(42px, 7vw, 64px);
   line-height: 1.02;
   letter-spacing: -0.5px;
 }
@@ -825,6 +825,11 @@
 }
 
 @media (max-width: 520px) {
+  /* HomePage: force "בטיפולי שיניים" to a new line under "50% הנחה" */
+  .heroTitleAccentBreak {
+    display: block;
+  }
+
   .benefits {
     grid-template-columns: 1fr;
     border: 0;

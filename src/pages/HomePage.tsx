@@ -42,7 +42,8 @@ export default function HomePage() {
                 המעטפת הרפואית
                 <br />
                 שמכסה לך עד
-                <br /> <span className="heroTitleAccent">50% הנחה</span>
+                <br /> <span className="heroTitleAccent">50% הנחה</span>{' '}
+                <span className="heroTitleAccent heroTitleAccentBreak">בטיפולי שיניים</span>
               </h1>
               <p className="heroSubtitle">
                 הכי משתלם לכסות אצל רפאל,
