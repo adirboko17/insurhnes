@@ -744,37 +744,9 @@
     text-align: center;
   }
 
-  /* Page B: benefits as clean stacked cards on mobile */
-  .page--b .benefits {
-    grid-template-columns: 1fr;
-    border: 0;
-    padding: 0;
-    gap: 12px;
-    justify-items: center;
-  }
-
-  .page--b .benefit + .benefit {
-    border-inline-start: 0;
-  }
-
-  .page--b .benefit {
-    width: 100%;
-    max-width: 420px;
-    margin-inline: auto;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 14px 16px;
-    box-sizing: border-box;
-    border: 0;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.06);
-    /* Crisper than border on some mobile screens */
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
-  }
-
-  .page--b .benefitText {
-    flex: 1;
-    text-align: center;
+  /* Page B: reduce gap to next section on mobile (avoid overlap) */
+  .page--b .why {
+    margin-top: 0;
   }
 
   .quickFormShell {
@@ -806,8 +778,9 @@
     padding-bottom: 56px;
   }
 
-  /* Page A: stack the 3 benefits vertically on mobile */
-  .page--a .benefits {
+  /* Page A + B: stack benefits vertically on mobile (consistent styling) */
+  .page--a .benefits,
+  .page--b .benefits {
     grid-template-columns: 1fr;
     border: 0;
     padding: 0;
@@ -815,7 +788,8 @@
     justify-items: center;
   }
 
-  .page--a .benefit {
+  .page--a .benefit,
+  .page--b .benefit {
     width: min(360px, 92%);
     margin-inline: auto;
     justify-content: flex-start;
@@ -828,7 +802,13 @@
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75);
   }
 
-  .page--a .benefit + .benefit {
+  /* Page B: slightly shorter cards on mobile */
+  .page--b .benefit {
+    width: min(280px, 80%);
+  }
+
+  .page--a .benefit + .benefit,
+  .page--b .benefit + .benefit {
     border-inline-start: 0;
   }
 }
@@ -864,6 +844,13 @@
 
   /* Page A: keep crisp border on mobile (override generic .benefit rule) */
   .page--a .benefit {
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+  }
+
+  /* Page B: match Page A card styling on mobile */
+  .page--b .benefit {
+    width: min(280px, 80%);
     border: 0;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75);
   }
@@ -906,31 +893,24 @@
     font-weight: 500;
   }
 
-  /* Page B: benefits copy is longer — allow wrapping & stack lines nicely on mobile */
-  .page--b .benefit {
-    align-items: center;
-    justify-content: flex-start;
-    border: 0;
-    /* Crisper than border on some mobile screens */
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
-  }
-
+  /* Page B: match Page A text layout on mobile */
   .page--b .benefitText {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 4px;
     flex-wrap: wrap;
     white-space: normal;
-    text-align: center;
+    text-align: right;
   }
 
   .page--b .benefitTop {
-    font-size: clamp(14px, 3.6vw, 16px);
-    line-height: 1.15;
+    font-weight: 800;
+    font-size: clamp(16px, 2.2vw, 22px);
   }
 
   .page--b .benefitBottom {
-    font-size: clamp(16px, 4.2vw, 19px);
+    font-weight: 500;
+    font-size: clamp(16px, 2.2vw, 22px);
     line-height: 1.15;
   }
 
