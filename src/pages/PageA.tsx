@@ -57,6 +57,7 @@ export default function PageA() {
 
           <form className="quickForm" onSubmit={onQuickSubmit} aria-label="טופס מהיר">
             <div className="quickFormShell">
+              <div className="quickFormTitle">סל הטבות והנחות משמעותיות למצטרפים היום!</div>
               <div className="quickField">
                 <label className="srOnly" htmlFor="quickFullName">
                   שם מלא
@@ -89,30 +90,44 @@ export default function PageA() {
               <button className="quickSubmit" type="submit">
                 שליחת הטופס &gt;&gt;
               </button>
+
+              <div className="consentRow consentRow--hero">
+                <input id="quickConsentA" name="marketingConsent" type="checkbox" required />
+                <label htmlFor="quickConsentA">
+                  אני מאשר/ת קבלת מסרים שיווקיים ועדכונים (טלפון / SMS / WhatsApp) מרפאל פיננסים ובריאות.
+                </label>
+              </div>
             </div>
           </form>
         </section>
 
         <section className="why">
           <div className="whyInner">
+            <div className="whyTitleBadgeRow" aria-hidden="true">
+              <span className="whyTitleBadge">VIP</span>
+            </div>
             <h2 className="whyTitle">
-              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">כיסוי אצלנו?</span>
+              <span className="whyTitleLite">
+                המינויים שלנו
+                <br />
+                נהנים מסל שירותים
+              </span>
             </h2>
             <p className="whySub">
-              כי אנחנו באמת דואגים להתפתחות הילד שלכם.
+              היחידים שדואגים להתפתחות הילד שלכם.
               <br />
-              <span className="whySubBold">אצלנו תקבלו את הדברים החשובים באמת.</span>
+              <span className="whySubBold">אצלנו תקבלו את הדברים החשובים באמת!</span>
             </p>
 
-            <div className="benefits">
+            <div className="benefits benefits--home benefits--homeLong">
               <div className="benefit">
                 <span className="benefitCheck" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">שירות תיאום</div>
+                  <div className="benefitTop">שירות תיאום תורים</div>
                   <div className="benefitBottom">
-                    והקדמת תורים
-                    <br />
-                    לרופא מומחה
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
                   </div>
                 </div>
               </div>
@@ -120,13 +135,11 @@ export default function PageA() {
               <div className="benefit">
                 <span className="benefitCheck" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">טיפולי פיזיותרפיה,</div>
+                  <div className="benefitTop">שירות הקדמת תורים</div>
                   <div className="benefitBottom">
-                    פסיכולוגיה, ריפוי בעיסוק,
-                    <br />
-                    קלינאית תקשורת
-                    <br />
-                    ועובדת סוציאלית.
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
                   </div>
                 </div>
               </div>
@@ -134,20 +147,106 @@ export default function PageA() {
               <div className="benefit">
                 <span className="benefitCheck" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">מימון עד 80%,</div>
+                  <div className="benefitTop">שירות רופא מומחה תוך זמן המתנה קצר</div>
                   <div className="benefitBottom">
-                    באבחונים דידקטיים,
-                    <br />
-                    פסיכו-דידקטי, מבחן טובה
-                    <br />
-                    ומבחן MOXO
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">טיפולי פיזיותרפיה</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">טיפולים פסיכולוגיים</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">ריפוי בעיסוק</div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">קלינאית תקשורת</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">עובדת סוציאלית</div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">מימון עד 80% באבחונים דידקטיים</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">מימון עד 80% באבחונים פסיכו-דידקטיים</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">מימון עד 80% במבחן טובה ומבחן MOXO</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
             <p className="whyKicker">
-              לא חסכנו בכלום, <span className="whyKickerBold">הבריאות שלכם חשובה לנו</span>
+              לא חסכנו בכלום,
+              <br />
+              <span className="whyKickerBold">הבריאות שלכם חשובה לנו</span>
             </p>
           </div>
         </section>
@@ -156,7 +255,11 @@ export default function PageA() {
           <div className="leadOverlay" aria-hidden />
           <div className="leadInner">
             <div className="leadCard" aria-label="השאירו פרטים ונחזור אליכם">
-              <h3 className="leadTitle">רוצים לכסות אצלנו?</h3>
+              <h3 className="leadTitle">
+                למה אתם מחכים?
+                <br />
+                מצטרפים היום ונהנים מסל הטבות במחיר VIP!
+              </h3>
               <p className="leadSubtitle">הצטרפו עכשיו למשפחת רפאל</p>
               <p className="leadHint">מלאו את פרטי הטופס ונחזור אליכם במהירות</p>
 
@@ -190,6 +293,13 @@ export default function PageA() {
                   inputMode="numeric"
                   required
                 />
+
+                <div className="consentRow consentRow--light">
+                  <input id="leadConsentA" name="marketingConsent" type="checkbox" required />
+                  <label htmlFor="leadConsentA">
+                    אני מאשר/ת קבלת מסרים שיווקיים ועדכונים (טלפון / SMS / WhatsApp) מרפאל פיננסים ובריאות.
+                  </label>
+                </div>
 
                 <button className="leadSubmit" type="submit">
                   שליחת טופס

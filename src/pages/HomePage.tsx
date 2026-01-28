@@ -57,6 +57,7 @@ export default function HomePage() {
 
           <form className="quickForm" onSubmit={onQuickSubmit} aria-label="טופס מהיר">
             <div className="quickFormShell">
+              <div className="quickFormTitle">סל הטבות והנחות משמעותיות למצטרפים היום!</div>
               <div className="quickField">
                 <label className="srOnly" htmlFor="quickFullName">
                   שם מלא
@@ -89,14 +90,28 @@ export default function HomePage() {
               <button className="quickSubmit" type="submit">
                 שליחת הטופס &gt;&gt;
               </button>
+
+              <div className="consentRow consentRow--hero">
+                <input id="quickConsentHome" name="marketingConsent" type="checkbox" required />
+                <label htmlFor="quickConsentHome">
+                  אני מאשר/ת קבלת מסרים שיווקיים ועדכונים (טלפון / SMS / WhatsApp) מרפאל פיננסים ובריאות.
+                </label>
+              </div>
             </div>
           </form>
         </section>
 
         <section className="why">
           <div className="whyInner">
+            <div className="whyTitleBadgeRow" aria-hidden="true">
+              <span className="whyTitleBadge">VIP</span>
+            </div>
             <h2 className="whyTitle">
-              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">כיסוי אצלנו?</span>
+              <span className="whyTitleLite">
+                המינויים שלנו
+                <br />
+                נהנים מסל שירותים
+              </span>
             </h2>
             <p className="whySub">
               כי אנחנו באמת דואגים לבריאות שלכם.
@@ -104,11 +119,11 @@ export default function HomePage() {
               <span className="whySubBold">אצלנו תקבלו את הדברים החשובים באמת.</span>
             </p>
 
-            <div className="benefits">
+            <div className="benefits benefits--home">
               <div className="benefit">
                 <span className="benefitIcon" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">צילום פנורמי</div>
+                  <div className="benefitTop">צילום פנורמי מלא</div>
                   <div className="benefitBottom">ללא עלות</div>
                 </div>
               </div>
@@ -124,22 +139,44 @@ export default function HomePage() {
               <div className="benefit">
                 <span className="benefitIcon" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">טיפול רופא</div>
-                  <div className="benefitBottom">עד הבית</div>
+                  <div className="benefitTop">רופא עד הבית</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
                 </div>
               </div>
 
               <div className="benefit">
                 <span className="benefitIcon" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">שירות תיאום</div>
-                  <div className="benefitBottom">והקדמת תורים</div>
+                  <div className="benefitTop">שירות תיאום תורים</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitIcon" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">שירות הקדמת תורים</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <p className="whyKicker">
-              לא חסכנו בכלום, <span className="whyKickerBold">הבריאות שלכם חשובה לנו</span>
+              לא חסכנו בכלום,
+              <br />
+              <span className="whyKickerBold">הבריאות שלכם חשובה לנו</span>
             </p>
           </div>
         </section>
@@ -182,6 +219,13 @@ export default function HomePage() {
                   inputMode="numeric"
                   required
                 />
+
+                <div className="consentRow consentRow--light">
+                  <input id="leadConsentHome" name="marketingConsent" type="checkbox" required />
+                  <label htmlFor="leadConsentHome">
+                    אני מאשר/ת קבלת מסרים שיווקיים ועדכונים (טלפון / SMS / WhatsApp) מרפאל פיננסים ובריאות.
+                  </label>
+                </div>
 
                 <button className="leadSubmit" type="submit">
                   שליחת טופס

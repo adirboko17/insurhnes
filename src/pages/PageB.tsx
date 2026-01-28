@@ -57,6 +57,7 @@ export default function PageB() {
 
           <form className="quickForm" onSubmit={onQuickSubmit} aria-label="טופס מהיר">
             <div className="quickFormShell">
+              <div className="quickFormTitle">סל הטבות והנחות משמעותיות למצטרפים היום!</div>
               <div className="quickField">
                 <label className="srOnly" htmlFor="quickFullName">
                   שם מלא
@@ -89,14 +90,28 @@ export default function PageB() {
               <button className="quickSubmit" type="submit">
                 שליחת הטופס &gt;&gt;
               </button>
+
+              <div className="consentRow consentRow--hero">
+                <input id="quickConsentB" name="marketingConsent" type="checkbox" required />
+                <label htmlFor="quickConsentB">
+                  אני מאשר/ת קבלת מסרים שיווקיים ועדכונים (טלפון / SMS / WhatsApp) מרפאל פיננסים ובריאות.
+                </label>
+              </div>
             </div>
           </form>
         </section>
 
         <section className="why">
           <div className="whyInner">
+            <div className="whyTitleBadgeRow" aria-hidden="true">
+              <span className="whyTitleBadge">VIP</span>
+            </div>
             <h2 className="whyTitle">
-              <span className="whyTitleLite">למה לעשות</span> <span className="whyTitleAccent">כיסוי אצלנו?</span>
+              <span className="whyTitleLite">
+                המינויים שלנו
+                <br />
+                נהנים מסל שירותים
+              </span>
             </h2>
             <p className="whySub">
               כי אנחנו באמת דואגים לבריאות התינוק שלך.
@@ -106,15 +121,43 @@ export default function PageB() {
               <span className="whySubBold">בשביל שיהיה לך הריון קל עד כמה שניתן.</span>
             </p>
 
-            <div className="benefits">
+            <div className="benefits benefits--home benefits--homeLong">
               <div className="benefit">
                 <span className="benefitCheck" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">מימון שירותי</div>
+                  <div className="benefitTop">מימון שירותי דולה</div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">מימון שירותי יועצת הנקה</div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">80% מימון לטיפולי פוריות</div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">מימון מלון לידה מפנק</div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">שירות תיאום תורים</div>
                   <div className="benefitBottom">
-                    דולה ויועצת
-                    <br />
-                    הנקה
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
                   </div>
                 </div>
               </div>
@@ -122,34 +165,32 @@ export default function PageB() {
               <div className="benefit">
                 <span className="benefitCheck" aria-hidden />
                 <div className="benefitText">
-                  <div className="benefitTop">80% מימון</div>
-                  <div className="benefitBottom">לטיפולי פוריות</div>
-                </div>
-              </div>
-
-              <div className="benefit">
-                <span className="benefitCheck" aria-hidden />
-                <div className="benefitText">
-                  <div className="benefitTop">מימון מלון</div>
-                  <div className="benefitBottom">לידה</div>
-                </div>
-              </div>
-
-              <div className="benefit">
-                <span className="benefitCheck" aria-hidden />
-                <div className="benefitText">
-                  <div className="benefitTop">שירות תיאום</div>
+                  <div className="benefitTop">שירות הקדמת תורים</div>
                   <div className="benefitBottom">
-                    והקדמת תורים
-                    <br />
-                    לרופא מומחה
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="benefit">
+                <span className="benefitCheck" aria-hidden />
+                <div className="benefitText">
+                  <div className="benefitTop">שירות רופא מומחה תוך זמן המתנה קצר</div>
+                  <div className="benefitBottom">
+                    <span className="benefitBadge" aria-label="VIP">
+                      VIP
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
             <p className="whyKicker">
-              לא חסכנו בכלום, <span className="whyKickerBold">הבריאות שלכם חשובה לנו</span>
+              לא חסכנו בכלום,
+              <br />
+              <span className="whyKickerBold">הבריאות שלכם חשובה לנו</span>
             </p>
           </div>
         </section>
@@ -192,6 +233,13 @@ export default function PageB() {
                   inputMode="numeric"
                   required
                 />
+
+                <div className="consentRow consentRow--light">
+                  <input id="leadConsentB" name="marketingConsent" type="checkbox" required />
+                  <label htmlFor="leadConsentB">
+                    אני מאשר/ת קבלת מסרים שיווקיים ועדכונים (טלפון / SMS / WhatsApp) מרפאל פיננסים ובריאות.
+                  </label>
+                </div>
 
                 <button className="leadSubmit" type="submit">
                   שליחת טופס
