@@ -108,9 +108,12 @@ export default function PageB() {
             </div>
             <h2 className="whyTitle">
               <span className="whyTitleLite">
-                המינויים שלנו
-                <br />
-                נהנים מסל שירותים
+                <span className="whyTitleDesktopOnly">המינויים שלנו</span>
+                <span className="whyTitleMobileOnly">המינויים שלנו נהנים</span>
+                <br className="whyTitleBreakDesktop" />
+                <br className="whyTitleBreakMobile" />
+                <span className="whyTitleDesktopOnly">נהנים מסל שירותים מורחב</span>
+                <span className="whyTitleMobileOnly">מסל שירותים מורחב</span>
               </span>
             </h2>
             <p className="whySub">

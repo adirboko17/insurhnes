@@ -510,6 +510,18 @@
   font-weight: 400;
 }
 
+.whyTitleMobileOnly {
+  display: none;
+}
+
+.whyTitleBreakMobile {
+  display: none;
+}
+
+.whyTitleBreakDesktop {
+  display: inline;
+}
+
 .whyTitleAccent {
   color: var(--accent);
 }
@@ -915,6 +927,23 @@
   .page--b .heroTitle,
   .page--b .heroSubtitle {
     text-align: center;
+  }
+
+  /* "Why" title: desktop vs mobile line breaks */
+  .whyTitleDesktopOnly {
+    display: none;
+  }
+
+  .whyTitleBreakDesktop {
+    display: none;
+  }
+
+  .whyTitleMobileOnly {
+    display: inline;
+  }
+
+  .whyTitleBreakMobile {
+    display: inline;
   }
 
   /* Page B: reduce gap to next section on mobile (avoid overlap) */
