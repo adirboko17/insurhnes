@@ -188,7 +188,11 @@ export default function HomePage() {
           <div className="leadOverlay" aria-hidden />
           <div className="leadInner">
             <div className="leadCard" aria-label="השאירו פרטים ונחזור אליכם">
-              <h3 className="leadTitle">מעוניינים בכיסוי שיניים?</h3>
+              <h3 className="leadTitle">
+                למה אתם מחכים?
+                <br />
+                מצטרפים היום ונהנים מסל הטבות במחיר VIP!
+              </h3>
               <p className="leadSubtitle">הצטרפו עכשיו למשפחת רפאל</p>
               <p className="leadHint">מלאו את פרטי הטופס ונחזור אליכם במהירות</p>
 
