@@ -1,10 +1,77 @@
 import logoRefaelUrl from '../assets/figma/logo-refael.svg'
 import heroPhotoUrl from '../assets/figma/10364 1.png'
 import { Component as HeroBackground } from '@/components/ui/background-snippets'
+import { useState } from 'react'
+import { useMetaPixelPageView } from '@/analytics/useMetaPixelPageView'
 
 export default function PageB() {
-  const onQuickSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+  useMetaPixelPageView('1566477564627655')
+
+  const WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/9109071/ulee756/'
+
+  const [quickStatus, setQuickStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [leadStatus, setLeadStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+
+  const postToWebhook = async (payload: Record<string, string>) => {
+    const body = new URLSearchParams(payload)
+
+    // Using x-www-form-urlencoded keeps this as a "simple request" (more CORS-friendly)
+    await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      },
+      body,
+    })
+  }
+
+  const onQuickSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault()
+
+    if (quickStatus === 'sending') return
+    setQuickStatus('sending')
+
+    try {
+      const form = e.currentTarget
+      const data = new FormData(form)
+
+      await postToWebhook({
+        page: 'pregnancy',
+        form: 'quick',
+        fullName: String(data.get('fullName') ?? ''),
+        phone: String(data.get('phone') ?? ''),
+      })
+
+      setQuickStatus('sent')
+      form.reset()
+    } catch {
+      setQuickStatus('error')
+    }
+  }
+
+  const onLeadSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault()
+
+    if (leadStatus === 'sending') return
+    setLeadStatus('sending')
+
+    try {
+      const form = e.currentTarget
+      const data = new FormData(form)
+
+      await postToWebhook({
+        page: 'pregnancy',
+        form: 'lead',
+        fullName: String(data.get('fullName') ?? ''),
+        phone: String(data.get('phone') ?? ''),
+        idNumber: String(data.get('idNumber') ?? ''),
+      })
+
+      setLeadStatus('sent')
+      form.reset()
+    } catch {
+      setLeadStatus('error')
+    }
   }
 
   return (
@@ -87,9 +154,14 @@ export default function PageB() {
                 />
               </div>
 
-              <button className="quickSubmit" type="submit">
-                שליחת הטופס &gt;&gt;
+              <button className="quickSubmit" type="submit" disabled={quickStatus === 'sending'}>
+                {quickStatus === 'sending' ? 'שולח…' : 'שליחת הטופס >>'}
               </button>
+
+              <div role="status" aria-live="polite" style={{ minHeight: 18, marginTop: 8, fontSize: 14 }}>
+                {quickStatus === 'sent' && 'נשלח בהצלחה. נחזור אליך בהקדם.'}
+                {quickStatus === 'error' && 'לא הצלחנו לשלוח כרגע. נסו שוב בעוד רגע.'}
+              </div>
 
               <div className="consentRow consentRow--hero">
                 <input id="quickConsentB" name="marketingConsent" type="checkbox" required />
@@ -210,7 +282,7 @@ export default function PageB() {
               <p className="leadSubtitle">הצטרפו עכשיו למשפחת רפאל</p>
               <p className="leadHint">מלאו את פרטי הטופס ונחזור אליכם במהירות</p>
 
-              <form className="leadForm" onSubmit={onQuickSubmit}>
+              <form className="leadForm" onSubmit={onLeadSubmit}>
                 <label className="srOnly" htmlFor="fullName">
                   שם מלא
                 </label>
@@ -248,9 +320,14 @@ export default function PageB() {
                   </label>
                 </div>
 
-                <button className="leadSubmit" type="submit">
-                  שליחת טופס
+                <button className="leadSubmit" type="submit" disabled={leadStatus === 'sending'}>
+                  {leadStatus === 'sending' ? 'שולח…' : 'שליחת טופס'}
                 </button>
+
+                <div role="status" aria-live="polite" style={{ minHeight: 18, marginTop: 8, fontSize: 14 }}>
+                  {leadStatus === 'sent' && 'נשלח בהצלחה. נחזור אליך בהקדם.'}
+                  {leadStatus === 'error' && 'לא הצלחנו לשלוח כרגע. נסו שוב בעוד רגע.'}
+                </div>
               </form>
             </div>
           </div>
